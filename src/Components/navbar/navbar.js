@@ -160,9 +160,14 @@ const renderItems = (items) => {
                   {name: "match-parent", path: '/element-directory/modifiers/size/match-parent'},
                   {name: "wrap-content", path: '/element-directory/modifiers/size/wrap-content'}
                 ]},
-            //     {name: "stroke", path: '/element-directory/modifiers/stroke'},
-            //     {name: "text-gradient", path: '/element-directory/modifiers/text-gradient'},
-            //     {name: "text-range-background", path: '/element-directory/modifiers/text-range-background'},
+                {name: "stroke", path: '/element-directory/modifiers/stroke'},
+                {name: "text-gradient", path: '/element-directory/modifiers/text-gradient', children: [
+                  {name: "linear", path: "/element-directory/modifiers/background/linear-gradient"},
+                  {name: "radial", path: "/element-directory/modifiers/background/radial-gradient"}
+                ]},
+                {name: "text-range-background", path: '/element-directory/modifiers/text-range-background', children: [
+                  {name: "solid-background", path: "/element-directory/modifiers/background/solid-background"}
+                ]},
             //     {name: "text-range-border", path: '/element-directory/modifiers/text-range-border'},
             //     {name: "timer", path: '/element-directory/modifiers/timer'},
             //     {name: "tooltip", path: '/element-directory/modifiers/tooltip'},
