@@ -68,6 +68,7 @@ import ChangeSetTransition from  './Components/Element_directory/Modifiers/chang
 import ChangeBoundsTransition from './Components/Element_directory/Modifiers/changeTransition/changeBoundsTransition/index';
 import Trigger from './Components/Element_directory/Modifiers/trigger/index';
 import VisibilityAction from './Components/Element_directory/Modifiers/visibilityAction/index';
+import FAQ from './Components/FAQ/index';
 
 const Router = createBrowserRouter(createRoutesFromElements(<Route errorElement={<>err</>}>
   <Route path="/" element={<>gg</>} />
@@ -138,6 +139,7 @@ const Router = createBrowserRouter(createRoutesFromElements(<Route errorElement=
   <Route path='/element-directory/modifiers/change-transition/change-bounds-transition' element={<ChangeBoundsTransition />} />
   <Route path='/element-directory/modifiers/trigger' element={<Trigger />} />
   <Route path='/element-directory/modifiers/visibility-action' element={<VisibilityAction />} />
+  <Route path='/element-directory/modifiers/faq' element={<FAQ />} />
 </Route>));
 
 function App() {

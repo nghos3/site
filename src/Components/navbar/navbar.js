@@ -199,14 +199,14 @@ const renderItems = (items) => {
         }
       ],
     },
-    // {
-    //     name: 'Customizations',
-    //      path: '/element-directory/modifiers/customizations'
-    // },
-    // {
-    //     name: 'FAQ',
-    //      path: '/element-directory/modifiers/faq'
-    // },
+    {
+        name: 'Customizations',
+         path: '/element-directory/modifiers/customizations'
+    },
+    {
+        name: 'FAQ',
+         path: '/element-directory/modifiers/faq'
+    },
   ];
 
 const  Navbar = () => {
