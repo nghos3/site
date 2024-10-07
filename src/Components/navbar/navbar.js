@@ -113,25 +113,37 @@ const RenderItems = ({ items }) => {
 };
 
 const items = [
+  {
+    name: 'Creating a card',
+    children: [
+      {  name: 'element-groups',
+         path: '/creating-card/element-groups' },
+      {  name: 'element-location-and-size',
+        path: '/creating-card/element-location-and-size' },
+      {  name: 'visual-element-design', 
+        path: '/creating-card/visual-element-design' },
+      {  name: 'mage-properties', 
+        path: '/creating-card/image-properties'},
+      {  name: 'text-properties',
+        path: '/creating-card/text-properties'},
+      {  name: 'interactive-elements',
+        path: '/creating-card/interactive-elements'},
+      {  name: 'animation',
+         path: '/creating-card/animation'},
+      {  name: 'video',
+         path: '/creating-card/video'},
+      {  name: 'action-with-elements',
+        path: '/creating-card/action-with-elements'},
+      {  name: 'templates', path: '/creating-card/templates'},
+      {  name: 'variables', 
+        path: '/creating-card/variables'},
+      {  name: 'calculated expressions',
+        path: '/creating-card/calculated-expressions' },
+      {  name: 'embedded functions',
+         path: '/creating-card/embedded-function'}
+    ],
+  },
   // {
-  //   name: 'Creating a card',
-  //   path: '/creating-card',
-  //   children: [
-  //     {  name: 'Element groups', path: '/creating-card/element-groups' },
-  //     {  name: 'Element location and size', path: '/creating-card/element-location-and-size' },
-  //     {  name: 'Visual element design', path: '/creating-card/visual-element-design' },
-  //     {  name: 'Image properties', path: '/creating-card/image-properties'},
-  //     {  name: 'Text properties', path: '/creating-card/text-properties'},
-  //     {  name: 'Interactive Elements', path: '/creating-card/interactive-elements'},
-  //     {  name: 'Animation', path: '/creating-card/animation'},
-  //     {  name: 'Video', path: '/creating-card/video'},
-  //     {  name: 'Action with elements', path: '/creating-card/action-with-elements'},
-  //     {  name: 'Templates', path: '/creating-card/templates'},
-  //     {  name: 'Variables', path: '/creating-card/variables'},
-  //     {  name: 'Calculated expressions',path: '/creating-card/calculated-expressions' },
-  //     {  name: 'Embedded functions', path: '/creating-card/embedded-function'}
-  //   ],
-  // },{
   //     name: 'Advanced Mechanics',
   //   children: [
   //     {  name: 'Reusing Blocks', path: '/advanced-mechanics/reusing-blocks',
