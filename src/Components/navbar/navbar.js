@@ -168,14 +168,33 @@ const renderItems = (items) => {
                 {name: "text-range-background", path: '/element-directory/modifiers/text-range-background', children: [
                   {name: "solid-background", path: "/element-directory/modifiers/background/solid-background"}
                 ]},
-            //     {name: "text-range-border", path: '/element-directory/modifiers/text-range-border'},
-            //     {name: "timer", path: '/element-directory/modifiers/timer'},
-            //     {name: "tooltip", path: '/element-directory/modifiers/tooltip'},
-            //     {name: "transform", path: '/element-directory/modifiers/transform'},
-            //     {name: "transition", path: '/element-directory/modifiers/transition'},
-            //     {name: "change-bounds-transition", path: '/element-directory/modifiers/change-bounds-transition'},
-            //     {name: "trigger", path: '/element-directory/modifiers/trigger'},
-            //     {name: "visibility-action", path: '/element-directory/modifiers/visibility-action'},
+                {name: "text-range-border", path: '/element-directory/modifiers/text-range-border'},
+                {name: "timer", path: '/element-directory/modifiers/timer'},
+                {name: "tooltip", path: '/element-directory/modifiers/tooltip'},
+                {name: "transform", path: '/element-directory/modifiers/transform'},
+                {name: "transition", children: [
+                  {name: "appearance-transition", path: '/element-directory/modifiers/transition/appearance', children: [
+                    {
+                      name: 'set-transition',
+                     path: '/element-directory/modifiers/transition/appearance/set'
+                    },{
+                      name: 'fade-transition',
+                      path: '/element-directory/modifiers/transition/appearance/fade'
+                    },{
+                      name: 'scale-transition',
+                      path: '/element-directory/modifiers/transition/appearance/scale'
+                    },{
+                      name: 'slide-transition',
+                       path: '/element-directory/modifiers/transition/appearance/slide'
+                    }
+                  ]}
+                ]},
+                {name: "change-transition", path: '/element-directory/modifiers/change-transition', children: [
+                  {name: "change-set-transition", path: '/element-directory/modifiers/change-transition/change-set-transition'},
+                  {name: "change-bounds-transition", path: '/element-directory/modifiers/change-transition/change-bounds-transition'}
+                ]},
+                {name: "trigger", path: '/element-directory/modifiers/trigger'},
+                {name: "visibility-action", path: '/element-directory/modifiers/visibility-action'},
             ]
         }
       ],
