@@ -69,6 +69,7 @@ import ChangeBoundsTransition from './Components/Element_directory/Modifiers/cha
 import Trigger from './Components/Element_directory/Modifiers/trigger/index';
 import VisibilityAction from './Components/Element_directory/Modifiers/visibilityAction/index';
 import FAQ from './Components/FAQ/index';
+import Customizations from './Components/Customizations/index';
 
 const Router = createBrowserRouter(createRoutesFromElements(<Route errorElement={<>err</>}>
   <Route path="/" element={<>gg</>} />
@@ -140,6 +141,7 @@ const Router = createBrowserRouter(createRoutesFromElements(<Route errorElement=
   <Route path='/element-directory/modifiers/trigger' element={<Trigger />} />
   <Route path='/element-directory/modifiers/visibility-action' element={<VisibilityAction />} />
   <Route path='/element-directory/modifiers/faq' element={<FAQ />} />
+  <Route path='/element-directory/modifiers/customizations' element={<Customizations />} />
 </Route>));
 
 function App() {
