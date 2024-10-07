@@ -1,5 +1,4 @@
 import React from 'react';
-import sliderThumbActions from './slider-thumb-actions.gif';
 import sliderTrackStyle from  './slider-track-style.png';
 import sliderWithCustomizedthumb from './slider-with-customized-thumb.png';
 import sliderWithThumbtext from './slider-with-thumb-text.png';
