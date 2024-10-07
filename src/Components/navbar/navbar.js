@@ -142,8 +142,7 @@ const items = [
   {
     name: "Element Directory",
     children: [
-      // { name: 'Typical Structure' },
-
+      { name: 'Typical Structure', path: "/element-directory/typical-structure" },
       {
         name: "Basic Elements",
         children: [
@@ -415,14 +414,14 @@ const items = [
       },
     ],
   },
-  // {
-  //     name: 'Customizations',
-  //      path: '/element-directory/modifiers/customizations'
-  // },
-  // {
-  //     name: 'FAQ',
-  //      path: '/element-directory/modifiers/faq'
-  // },
+  {
+      name: 'Customizations',
+       path: '/customizations'
+  },
+  {
+      name: 'FAQ',
+       path: '/faq'
+  },
 ];
 
 const Navbar = () => {

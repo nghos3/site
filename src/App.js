@@ -92,7 +92,9 @@ import State from "./Components/Element_directory/BasicElements/State/index";
 import Tabs from "./Components/Element_directory/BasicElements/Tabs/index";
 import Text from "./Components/Element_directory/BasicElements/Text/index";
 import Video from "./Components/Element_directory/BasicElements/Video/index";
+import TypicalStructure from './Components/Element_directory/TypicalStructure/index';
 import Navigation from "./navigation";
+
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
@@ -631,7 +633,7 @@ const Router = createBrowserRouter(
         }
       />
       <Route
-        path="/element-directory/modifiers/faq"
+        path="/faq"
         element={
           <Navigation>
             <FAQ />
@@ -639,7 +641,7 @@ const Router = createBrowserRouter(
         }
       />
       <Route
-        path="/element-directory/modifiers/customizations"
+        path="/customizations"
         element={
           <Navigation>
             <Customizations />
@@ -784,6 +786,10 @@ const Router = createBrowserRouter(
           </Navigation>
         }
       />
+      <Route path="/element-directory/typical-structure" element={
+        <Navigation>
+          <TypicalStructure />
+        </Navigation>} />
     </Route>
   )
 );
