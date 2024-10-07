@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
+import { last } from "lodash";
 
 const RenderItems = ({ items }) => {
   const [openItems, setOpenItems] = useState([]);
   const navigate = useNavigate();
 
   const handleClick = (item) => {
-    console.log(item);
     if (openItems.includes(item.name)) {
       const tempOpenItems = [...openItems];
       tempOpenItems.splice(tempOpenItems.indexOf(item.name), 1);
@@ -16,8 +16,7 @@ const RenderItems = ({ items }) => {
       setOpenItems([...openItems, item.name]);
     }
   };
-
-  console.log(openItems);
+  const pageName = last(window.location.pathname.split("/"));
   return (
     <ul className="dc-toc__list" aria-labelledby={uuidv4()}>
       {items.map((item) => (
@@ -27,11 +26,18 @@ const RenderItems = ({ items }) => {
         >
           {item.children && (
             <button
-              className="dc-toc-item__text dc-toc-item__text_clicable"
+              className={
+                pageName === item.name
+                  ? "dc-toc-item__text dc-toc-item__text_active"
+                  : "dc-toc-item__text dc-toc-item__text_clicable"
+              }
               aria-expanded="true"
               aria-label={`Drop-down ${item.name}`}
               list
-              onClick={() => handleClick(item)}
+              onClick={() => {
+                handleClick(item);
+                if (item.path) navigate(item.path);
+              }}
             >
               {openItems.includes(item.name) ? (
                 <svg
@@ -49,7 +55,7 @@ const RenderItems = ({ items }) => {
                     clipRule="evenodd"
                   ></path>
                 </svg>
-              ): (
+              ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -70,13 +76,10 @@ const RenderItems = ({ items }) => {
               {item.path && (
                 <span
                   onClick={() => navigate(item.path)}
-                  target="_self"
                   className="dc-toc-item__link"
                   data-router-shallow="true"
                 >
-                  <div className="dc-toc-item__text dc-toc-item__text_clicable">
-                    <span>{item.name}</span>
-                  </div>
+                  <span>{item.name}</span>
                 </span>
               )}
             </button>
@@ -84,11 +87,16 @@ const RenderItems = ({ items }) => {
           {!item.children && (
             <span
               onClick={() => navigate(item.path)}
-              target="_self"
               className="dc-toc-item__link"
               data-router-shallow="true"
             >
-              <div className="dc-toc-item__text dc-toc-item__text_clicable">
+              <div
+                className={
+                  pageName === item.name
+                    ? "dc-toc-item__text dc-toc-item__text_active"
+                    : "dc-toc-item__text dc-toc-item__text_clicable"
+                }
+              >
                 <span>{item.name}</span>
               </div>
             </span>
