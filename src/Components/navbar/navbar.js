@@ -168,7 +168,7 @@ const renderItems = (items) => {
                 {name: "text-range-background", path: '/element-directory/modifiers/text-range-background', children: [
                   {name: "solid-background", path: "/element-directory/modifiers/background/solid-background"}
                 ]},
-                {name: "text-range-border", path: '/element-directory/modifiers/text-range-border'},
+                {name: "text-range-border", path:'/element-directory/modifiers/text-range-border'},
                 {name: "timer", path: '/element-directory/modifiers/timer'},
                 {name: "tooltip", path: '/element-directory/modifiers/tooltip'},
                 {name: "transform", path: '/element-directory/modifiers/transform'},
