@@ -94,12 +94,38 @@ import Text from "./Components/Element_directory/BasicElements/Text/index";
 import Video from "./Components/Element_directory/BasicElements/Video/index";
 import TypicalStructure from './Components/Element_directory/TypicalStructure/index';
 import Navigation from "./navigation";
-
+import ElementGoups from './Components/CreatingACard/elementGroups/index';
+import ElementLocationAndSize from './Components/CreatingACard/elementLocationAndSize/index'
+import ImageProperties from './Components/CreatingACard/imageProperties/index';
+import TextProperties from './Components/CreatingACard/textProperties/index';
+import InteractiveElements from './Components/CreatingACard/interactiveElements/index';
+import Animations from './Components/CreatingACard/animation/index';
+import Videos from './Components/CreatingACard/video/index';
+import ActionWithElement from './Components/CreatingACard/actionWithElements/index';
+import Templates from './Components/CreatingACard/templates/index';
+import Variables from './Components/CreatingACard/varaibles/index';
+import CalculatedExpressions from './Components/CreatingACard/calculatedExpressions/index';
+import EmbeddedFunction from './Components/CreatingACard/embeddedFunctions/index';
+import VisualElementDesign from './Components/CreatingACard/visualElementDesign';
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
+    
     <Route errorElement={<>err</>}>
-      <Route path="/" element={<>gg</>} />
+       <Route  path="/" element={<Navigation>gg</Navigation>} />
+      <Route path='/creating-card/visual-element-design'  element={<Navigation><VisualElementDesign /></Navigation>} />
+      <Route path='/creating-card/element-groups' element={<Navigation><ElementGoups /></Navigation>} />
+      <Route  path='/creating-card/element-location-and-size' element={<Navigation><ElementLocationAndSize /></Navigation>} />
+      <Route path='/creating-card/image-properties' element={<Navigation><ImageProperties /></Navigation>} />
+      <Route path='/creating-card/text-properties' element={<Navigation><TextProperties /></Navigation>} />
+      <Route path='/creating-card/interactive-elements' element={<Navigation><InteractiveElements /></Navigation>} />
+      <Route path='/creating-card/animation' element={<Navigation><Animations /></Navigation>} />
+      <Route path='/creating-card/video' element={<Navigation><Videos /></Navigation>} />
+      <Route path='/creating-card/action-with-elements' element={<Navigation><ActionWithElement /></Navigation>} />
+      <Route path='/creating-card/templates' element={<Navigation><Templates /></Navigation>} />
+      <Route path='/creating-card/variables' element={<Navigation><Variables /></Navigation>} />
+      <Route path='/creating-card/calculated-expressions'  element={<Navigation><CalculatedExpressions /></Navigation>} />
+      <Route path='/creating-card/embedded-function' element={<Navigation><EmbeddedFunction /></Navigation>} />
       <Route
         path="/element-directory/modifiers/absolute-edge-insets"
         element={
