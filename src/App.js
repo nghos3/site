@@ -70,6 +70,24 @@ import Trigger from './Components/Element_directory/Modifiers/trigger/index';
 import VisibilityAction from './Components/Element_directory/Modifiers/visibilityAction/index';
 import FAQ from './Components/FAQ/index';
 import Customizations from './Components/Customizations/index';
+import Container from './Components/Element_directory/BasicElements/Container/index';
+import Custom from './Components/Element_directory/BasicElements/Custom/index';
+import Data from './Components/Element_directory/BasicElements/Data/index';
+import Gallery from './Components/Element_directory/BasicElements/Gallery/index';
+import GifImage from './Components/Element_directory/BasicElements/GifImage/index';
+import Grid from './Components/Element_directory/BasicElements/Grid/index';
+import Image from './Components/Element_directory/BasicElements/Image/index';
+import Indicator from './Components/Element_directory/BasicElements/Indicator/index';
+import Input from './Components/Element_directory/BasicElements/Input/index';
+import Pager from './Components/Element_directory/BasicElements/Pager/index';
+import Select from './Components/Element_directory/BasicElements/Select/index';
+import Seperator from './Components/Element_directory/BasicElements/Seperator/index';
+import Slider from './Components/Element_directory/BasicElements/Slider/index';
+import State from './Components/Element_directory/BasicElements/State/index';
+import Tabs from './Components/Element_directory/BasicElements/Tabs/index';
+import Text from './Components/Element_directory/BasicElements/Text/index';
+import Video from './Components/Element_directory/BasicElements/Video/index';
+
 
 const Router = createBrowserRouter(createRoutesFromElements(<Route errorElement={<>err</>}>
   <Route path="/" element={<>gg</>} />
@@ -142,6 +160,23 @@ const Router = createBrowserRouter(createRoutesFromElements(<Route errorElement=
   <Route path='/element-directory/modifiers/visibility-action' element={<VisibilityAction />} />
   <Route path='/element-directory/modifiers/faq' element={<FAQ />} />
   <Route path='/element-directory/modifiers/customizations' element={<Customizations />} />
+  <Route path='/element-directory/basic-elements/container' element={<Container />} />
+  <Route path='/element-directory/basic-elements/custom' element={<Custom />} />
+  <Route path='/element-directory/basic-elements/data' element={<Navigation><Data /></Navigation>} />
+  <Route path='/element-directory/basic-elements/gallery' element={<Navigation><Gallery /></Navigation>} />
+  <Route path='/element-directory/basic-elements/gif-image' element={<Navigation><GifImage /></Navigation>} />
+  <Route path='/element-directory/basic-elements/grid' element={<Navigation><Grid /></Navigation>} />
+  <Route path='/element-directory/basic-elements/image' element={<Navigation><Image /></Navigation>} />
+  <Route path='/element-directory/basic-elements/indicator' element={<Navigation><Indicator /></Navigation>} />
+  <Route path='/element-directory/basic-elements/input' element={<Navigation><Input /><Input /></Navigation>} />
+  <Route path='/element-directory/basic-elements/pager' element={<Navigation><Pager /></Navigation>} />
+  <Route path='/element-directory/basic-elements/select' element={<Navigation><Select /></Navigation>} />
+  <Route path='/element-directory/basic-elements/seperator' element={<Navigation><Seperator /></Navigation>} />
+  <Route path='/element-directory/basic-elements/slider' element={<Navigation><Slider /></Navigation>} />
+  <Route path='/element-directory/basic-elements/state' element={<Navigation><State /></Navigation>} />
+  <Route path='/element-directory/basic-elements/tabs' element={<Navigation><Tabs /></Navigation>} />
+  <Route path='/element-directory/basic-elements/text' element={<Navigation><Text /></Navigation>} />
+  <Route path='/element-directory/basic-elements/video' element={<Navigation><Video /></Navigation>} />
 </Route>));
 
 function App() {
