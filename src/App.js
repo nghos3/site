@@ -32,6 +32,8 @@ import Blur from './Components/Element_directory/Modifiers/filter/blur/index';
 import FilterRtlMirror from './Components/Element_directory/Modifiers/filter/filterRtlMirror/index';
 import Focus from './Components/Element_directory/Modifiers/focus/index';
 import IndicatorItemPlacement from './Components/Element_directory/Modifiers/indicatorItemPlacement/index';
+import DefaultIndicatorItemPlacement from './Components/Element_directory/Modifiers/indicatorItemPlacement/defaultIndicatorItemPlacement/index';
+import StretchIndicatorItemPlacement from './Components/Element_directory/Modifiers/indicatorItemPlacement/stretchIndicatorItemPlacement/index';
 
 const Router = createBrowserRouter(createRoutesFromElements(<Route errorElement={<>err</>}>
   <Route path="/" element={<>gg</>} />
@@ -66,6 +68,8 @@ const Router = createBrowserRouter(createRoutesFromElements(<Route errorElement=
   <Route path='/element-directory/modifiers/filter/filter-rtl-mirror' element={<FilterRtlMirror />} />
   <Route path='/element-directory/modifiers/focus' element={<Focus />} />
   <Route path='/element-directory/modifiers/indicator-item-placement' element={<IndicatorItemPlacement />} />
+  <Route path="/element-directory/modifiers/indicator-item-placement/default-indicator-item-placement" element={<DefaultIndicatorItemPlacement />}/>
+  <Route path="/element-directory/modifiers/indicator-item-placement/stretch-indicator-item-placement" element={<StretchIndicatorItemPlacement />} />
 </Route>));
 
 function App() {

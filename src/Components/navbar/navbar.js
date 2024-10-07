@@ -139,13 +139,27 @@ const renderItems = (items) => {
                       path: '/element-directory/modifiers/indicator-item-placement/stretch-indicator-item-placement'
                     }
                 ]},
-            //     {name: "pager-layout-mode", path: '/element-directory/modifiers/pager-layout-mode'},
-            //     {name: "patch", path: '/element-directory/modifiers/patch'},
-            //     {name: "percentage-size", path: '/element-directory/modifiers/percentage-size'},
-            //     {name: "pivot", path: '/element-directory/modifiers/pivot'},
-            //     {name: "shadow", path: '/element-directory/modifiers/shadow'},
-            //     {name: "shape", path: '/element-directory/modifiers/shape'},
-            //     {name: "size", path: '/element-directory/modifiers/size'},
+                {name: "pager-layout-mode", path: '/element-directory/modifiers/pager-layout-mode', children: [
+                  {name: 'pager-size', path: '/element-directory/modifiers/pager-layout-mode/pager-size'},
+                  {name: 'neighbour-page-size', path: '/element-directory/modifiers/pager-layout-mode/neighbour-page-size'}
+                ]},
+                {name: "patch", path: '/element-directory/modifiers/patch'},
+                {name: "percentage-size", path: '/element-directory/modifiers/percentage-size'},
+                {name: "pivot", path: '/element-directory/modifiers/pivot', children: [
+                  {name: "pivot-fixed", path: '/element-directory/modifiers/pivot/fixed'},
+                  {name: "pivot-percentage", path: '/element-directory/modifiers/pivot/percentage'}
+                ]},
+                {name: "point", path: '/element-directory/modifiers/point'},
+                {name: "shadow", path: '/element-directory/modifiers/shadow'},
+                {name: "shape", path: '/element-directory/modifiers/shape', children: [
+                  {name: "rounded-rectangle", path: '/element-directory/modifiers/shape/rounded-rectangle'},
+                   { name: "circle"  , path: '/element-directory/modifiers/shape/circle'}
+                ]},
+                {name: "size", path: '/element-directory/modifiers/size', children: [
+                  {name: "fixed", path: '/element-directory/modifiers/size/fixed' },
+                  {name: "match-parent", path: '/element-directory/modifiers/size/match-parent'},
+                  {name: "wrap-content", path: '/element-directory/modifiers/size/wrap-content'}
+                ]},
             //     {name: "stroke", path: '/element-directory/modifiers/stroke'},
             //     {name: "text-gradient", path: '/element-directory/modifiers/text-gradient'},
             //     {name: "text-range-background", path: '/element-directory/modifiers/text-range-background'},
