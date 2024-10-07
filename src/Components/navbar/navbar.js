@@ -33,21 +33,39 @@ const RenderItems = ({ items }) => {
               list
               onClick={() => handleClick(item)}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="none"
-                viewBox="0 0 16 16"
-                className="dc-toggle-arrow dc-toggle-arrow_type_horizontal dc-toggle-arrow_open dc-toggle-arrow_thin dc-toc-item__icon"
-              >
-                <path
-                  fill="currentColor"
-                  fillRule="evenodd"
-                  d="M5.47 13.03a.75.75 0 0 1 0-1.06L9.44 8 5.47 4.03a.75.75 0 0 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0Z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              {openItems.includes(item.name) ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  viewBox="0 0 16 16"
+                  className="dc-toggle-arrow dc-toggle-arrow_type_horizontal dc-toggle-arrow_open dc-toggle-arrow_thin dc-toc-item__icon"
+                >
+                  <path
+                    fill="currentColor"
+                    fillRule="evenodd"
+                    d="M5.47 13.03a.75.75 0 0 1 0-1.06L9.44 8 5.47 4.03a.75.75 0 0 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0Z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+              ): (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  viewBox="0 0 16 16"
+                  className="dc-toggle-arrow dc-toggle-arrow_open dc-toggle-arrow_thin dc-toc-item__icon"
+                >
+                  <path
+                    fill="currentColor"
+                    fillRule="evenodd"
+                    d="M5.47 13.03a.75.75 0 0 1 0-1.06L9.44 8 5.47 4.03a.75.75 0 0 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0Z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+              )}
               {!item.path && <span>{item.name}</span>}
               {item.path && (
                 <span
@@ -125,26 +143,44 @@ const items = [
     name: "Element Directory",
     children: [
       // { name: 'Typical Structure' },
-      
-      {name: 'Basic Elements' , children: [
-        {name: "container", path: '/element-directory/basic-elements/container'},
-        {name: "custom", path: '/element-directory/basic-elements/custom'},
-        {name: "data", path: '/element-directory/basic-elements/data'},
-        {name: "gallery", path: '/element-directory/basic-elements/gallery'},
-        {name: "gif-image", path: '/element-directory/basic-elements/gif-image'},
-        {name: "grid", path: '/element-directory/basic-elements/grid'},
-        {name: "image", path: '/element-directory/basic-elements/image'},
-        {name: "indicator", path: '/element-directory/basic-elements/indicator'},
-        {name: "input", path: '/element-directory/basic-elements/input'},
-        {name: "pager", path: '/element-directory/basic-elements/pager'},
-        {name: "select", path: '/element-directory/basic-elements/select'},
-        {name: "seperator", path: '/element-directory/basic-elements/seperator'},
-        {name: "slider", path: '/element-directory/basic-elements/slider'},
-        {name: "state", path: '/element-directory/basic-elements/state'},
-        {name: "tabs", path: '/element-directory/basic-elements/tabs'},
-        {name: "text", path: '/element-directory/basic-elements/text'},
-        {name: "video", path: '/element-directory/basic-elements/video'}
-    ]},
+
+      {
+        name: "Basic Elements",
+        children: [
+          {
+            name: "container",
+            path: "/element-directory/basic-elements/container",
+          },
+          { name: "custom", path: "/element-directory/basic-elements/custom" },
+          { name: "data", path: "/element-directory/basic-elements/data" },
+          {
+            name: "gallery",
+            path: "/element-directory/basic-elements/gallery",
+          },
+          {
+            name: "gif-image",
+            path: "/element-directory/basic-elements/gif-image",
+          },
+          { name: "grid", path: "/element-directory/basic-elements/grid" },
+          { name: "image", path: "/element-directory/basic-elements/image" },
+          {
+            name: "indicator",
+            path: "/element-directory/basic-elements/indicator",
+          },
+          { name: "input", path: "/element-directory/basic-elements/input" },
+          { name: "pager", path: "/element-directory/basic-elements/pager" },
+          { name: "select", path: "/element-directory/basic-elements/select" },
+          {
+            name: "seperator",
+            path: "/element-directory/basic-elements/seperator",
+          },
+          { name: "slider", path: "/element-directory/basic-elements/slider" },
+          { name: "state", path: "/element-directory/basic-elements/state" },
+          { name: "tabs", path: "/element-directory/basic-elements/tabs" },
+          { name: "text", path: "/element-directory/basic-elements/text" },
+          { name: "video", path: "/element-directory/basic-elements/video" },
+        ],
+      },
       {
         name: "Modifiers",
         children: [
