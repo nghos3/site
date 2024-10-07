@@ -178,8 +178,8 @@ const items = [
           { name: "pager", path: "/element-directory/basic-elements/pager" },
           { name: "select", path: "/element-directory/basic-elements/select" },
           {
-            name: "seperator",
-            path: "/element-directory/basic-elements/seperator",
+            name: "separator",
+            path: "/element-directory/basic-elements/separator",
           },
           { name: "slider", path: "/element-directory/basic-elements/slider" },
           { name: "state", path: "/element-directory/basic-elements/state" },
@@ -389,16 +389,16 @@ const items = [
           {
             name: "text-gradient",
             path: "/element-directory/modifiers/text-gradient",
-            children: [
-              {
-                name: "linear",
-                path: "/element-directory/modifiers/background/linear-gradient",
-              },
-              {
-                name: "radial",
-                path: "/element-directory/modifiers/background/radial-gradient",
-              },
-            ],
+            // children: [
+            //   {
+            //     name: "linear",
+            //     path: "/element-directory/modifiers/background/linear-gradient",
+            //   },
+            //   {
+            //     name: "radial",
+            //     path: "/element-directory/modifiers/background/radial-gradient",
+            //   },
+            // ],
           },
           {
             name: "text-range-background",

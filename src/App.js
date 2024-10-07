@@ -86,7 +86,7 @@ import Indicator from "./Components/Element_directory/BasicElements/Indicator/in
 import Input from "./Components/Element_directory/BasicElements/Input/index";
 import Pager from "./Components/Element_directory/BasicElements/Pager/index";
 import Select from "./Components/Element_directory/BasicElements/Select/index";
-import Seperator from "./Components/Element_directory/BasicElements/Seperator/index";
+import Separator from "./Components/Element_directory/BasicElements/Separator/index";
 import Slider from "./Components/Element_directory/BasicElements/Slider/index";
 import State from "./Components/Element_directory/BasicElements/State/index";
 import Tabs from "./Components/Element_directory/BasicElements/Tabs/index";
@@ -739,10 +739,10 @@ const Router = createBrowserRouter(
         }
       />
       <Route
-        path="/element-directory/basic-elements/seperator"
+        path="/element-directory/basic-elements/separator"
         element={
           <Navigation>
-            <Seperator />
+            <Separator />
           </Navigation>
         }
       />

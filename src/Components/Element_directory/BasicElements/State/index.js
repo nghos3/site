@@ -1,595 +1,1138 @@
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Component = () => {
-    return (<div class="dc-doc-layout__center">
-        <div class="dc-doc-page__breadcrumbs">
-            <nav class="dc-breadcrumbs" aria-label="Breadcrumbs">
-                <ol class="dc-breadcrumbs__items">
-                    <li class="dc-breadcrumbs__item"><span class="dc-breadcrumbs__text">Element directory</span></li>
-                    <li class="dc-breadcrumbs__item"><span class="dc-breadcrumbs__text">Basic elements</span></li>
-                    <li class="dc-breadcrumbs__item"><span class="dc-breadcrumbs__text" href="en/concepts/divs/2/div-state"
-                            aria-current="page">state</span></li>
-                </ol>
-            </nav>
+  const navigate = useNavigate();
+  return (
+    <div class="dc-doc-layout__center">
+      <div class="dc-doc-page__breadcrumbs">
+        <nav class="dc-breadcrumbs" aria-label="Breadcrumbs">
+          <ol class="dc-breadcrumbs__items">
+            <li class="dc-breadcrumbs__item">
+              <span class="dc-breadcrumbs__text">Element directory</span>
+            </li>
+            <li class="dc-breadcrumbs__item">
+              <span class="dc-breadcrumbs__text">Basic elements</span>
+            </li>
+            <li class="dc-breadcrumbs__item">
+              <span
+                class="dc-breadcrumbs__text"
+                href="en/concepts/divs/2/div-state"
+                aria-current="page"
+              >
+                state
+              </span>
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <div class="dc-doc-page__controls">
+        <div class="dc-controls">
+          <button
+            aria-label="Reading mode"
+            class="g-button g-button_view_flat-secondary g-button_size_m g-button_pin_round-round dc-control dc-controls__control"
+            type="button"
+          >
+            <span class="g-button__icon">
+              <span class="g-button__icon-inner">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M4.5 3A1.5 1.5 0 0 0 3 4.5v1.75a.75.75 0 0 1-1.5 0V4.5a3 3 0 0 1 3-3h1.75a.75.75 0 0 1 0 1.5H4.5ZM9 2.25a.75.75 0 0 1 .75-.75h1.75a3 3 0 0 1 3 3v1.75a.75.75 0 0 1-1.5 0V4.5A1.5 1.5 0 0 0 11.5 3H9.75A.75.75 0 0 1 9 2.25ZM2.25 9a.75.75 0 0 1 .75.75v1.75A1.5 1.5 0 0 0 4.5 13h1.75a.75.75 0 0 1 0 1.5H4.5a3 3 0 0 1-3-3V9.75A.75.75 0 0 1 2.25 9Zm11.5 0a.75.75 0 0 1 .75.75v1.75a3 3 0 0 1-3 3H9.75a.75.75 0 0 1 0-1.5h1.75a1.5 1.5 0 0 0 1.5-1.5V9.75a.75.75 0 0 1 .75-.75Z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <div class="dc-divider-control dc-divider-control_vertical dc-controls__divider"></div>
+          <button
+            aria-label="Helpful"
+            class="g-button g-button_view_flat-secondary g-button_size_m g-button_pin_round-round dc-control dc-feedback__control dc-feedback__control_view_regular dc-controls__control"
+            type="button"
+          >
+            <span class="g-button__icon">
+              <span class="g-button__icon-inner">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="m4 7 2.94-5.041a1.932 1.932 0 0 1 3.56 1.378L10.25 4.5 9.93 6h2.94a2 2 0 0 1 1.927 2.535l-.879 3.162A4 4 0 0 1 9.596 14.6L4.5 14 4 7Zm5.771 6.11-3.863-.455-.379-5.3 2.708-4.64a.432.432 0 0 1 .796.308l-.571 2.663L8.073 7.5h4.796a.5.5 0 0 1 .482.634l-.879 3.162a2.5 2.5 0 0 1-2.7 1.814ZM2.748 7.447a.75.75 0 1 0-1.496.106l.5 7a.75.75 0 0 0 1.496-.106l-.5-7Z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <button
+            aria-label="Not helpful"
+            class="g-button g-button_view_flat-secondary g-button_size_m g-button_pin_round-round dc-control dc-feedback__control dc-feedback__control_view_regular dc-controls__control"
+            type="button"
+          >
+            <span class="g-button__icon">
+              <span class="g-button__icon-inner">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="m12 9-2.94 5.041a1.932 1.932 0 0 1-3.56-1.378l.25-1.163.321-1.5h-2.94a2 2 0 0 1-1.927-2.535l.879-3.162A4 4 0 0 1 6.404 1.4L11.5 2l.5 7ZM6.229 2.89l3.863.455.379 5.3-2.708 4.64a.432.432 0 0 1-.796-.308l.571-2.663.389-1.814H3.13a.5.5 0 0 1-.482-.634l.879-3.162a2.5 2.5 0 0 1 2.7-1.814Zm7.023 5.663a.75.75 0 1 0 1.496-.106l-.5-7a.75.75 0 0 0-1.496.106l.5 7Z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+            </span>
+          </button>
         </div>
-        <div class="dc-doc-page__controls">
-            <div class="dc-controls"><button aria-label="Reading mode"
-                    class="g-button g-button_view_flat-secondary g-button_size_m g-button_pin_round-round dc-control dc-controls__control"
-                    type="button"><span class="g-button__icon"><span class="g-button__icon-inner"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                                <path fill="currentColor" fill-rule="evenodd"
-                                    d="M4.5 3A1.5 1.5 0 0 0 3 4.5v1.75a.75.75 0 0 1-1.5 0V4.5a3 3 0 0 1 3-3h1.75a.75.75 0 0 1 0 1.5H4.5ZM9 2.25a.75.75 0 0 1 .75-.75h1.75a3 3 0 0 1 3 3v1.75a.75.75 0 0 1-1.5 0V4.5A1.5 1.5 0 0 0 11.5 3H9.75A.75.75 0 0 1 9 2.25ZM2.25 9a.75.75 0 0 1 .75.75v1.75A1.5 1.5 0 0 0 4.5 13h1.75a.75.75 0 0 1 0 1.5H4.5a3 3 0 0 1-3-3V9.75A.75.75 0 0 1 2.25 9Zm11.5 0a.75.75 0 0 1 .75.75v1.75a3 3 0 0 1-3 3H9.75a.75.75 0 0 1 0-1.5h1.75a1.5 1.5 0 0 0 1.5-1.5V9.75a.75.75 0 0 1 .75-.75Z"
-                                    clip-rule="evenodd"></path>
-                            </svg></span></span></button>
-                <div class="dc-divider-control dc-divider-control_vertical dc-controls__divider"></div><button
-                    aria-label="Helpful"
-                    class="g-button g-button_view_flat-secondary g-button_size_m g-button_pin_round-round dc-control dc-feedback__control dc-feedback__control_view_regular dc-controls__control"
-                    type="button"><span class="g-button__icon"><span class="g-button__icon-inner"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                                <path fill="currentColor" fill-rule="evenodd"
-                                    d="m4 7 2.94-5.041a1.932 1.932 0 0 1 3.56 1.378L10.25 4.5 9.93 6h2.94a2 2 0 0 1 1.927 2.535l-.879 3.162A4 4 0 0 1 9.596 14.6L4.5 14 4 7Zm5.771 6.11-3.863-.455-.379-5.3 2.708-4.64a.432.432 0 0 1 .796.308l-.571 2.663L8.073 7.5h4.796a.5.5 0 0 1 .482.634l-.879 3.162a2.5 2.5 0 0 1-2.7 1.814ZM2.748 7.447a.75.75 0 1 0-1.496.106l.5 7a.75.75 0 0 0 1.496-.106l-.5-7Z"
-                                    clip-rule="evenodd"></path>
-                            </svg></span></span></button><button aria-label="Not helpful"
-                    class="g-button g-button_view_flat-secondary g-button_size_m g-button_pin_round-round dc-control dc-feedback__control dc-feedback__control_view_regular dc-controls__control"
-                    type="button"><span class="g-button__icon"><span class="g-button__icon-inner"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                                <path fill="currentColor" fill-rule="evenodd"
-                                    d="m12 9-2.94 5.041a1.932 1.932 0 0 1-3.56-1.378l.25-1.163.321-1.5h-2.94a2 2 0 0 1-1.927-2.535l.879-3.162A4 4 0 0 1 6.404 1.4L11.5 2l.5 7ZM6.229 2.89l3.863.455.379 5.3-2.708 4.64a.432.432 0 0 1-.796-.308l.571-2.663.389-1.814H3.13a.5.5 0 0 1-.482-.634l.879-3.162a2.5 2.5 0 0 1 2.7-1.814Zm7.023 5.663a.75.75 0 1 0 1.496-.106l-.5-7a.75.75 0 0 0-1.496.106l.5 7Z"
-                                    clip-rule="evenodd"></path>
-                            </svg></span></span></button>
-            </div>
-        </div>
-        <div class="dc-doc-page__main">
-            <main class="dc-doc-page__content">
-                <h1 class="dc-doc-page-title dc-doc-page__title"><span>div-state</span></h1>
-                <div class="dc-doc-page__page-contributors"></div>
-                <div class="dc-doc-page__content-mini-toc yfm">
-                    <ul>
-                        <li><a href="en/concepts/divs/2/div-state#parameters">Parameters</a>
-                            <ul>
-                                <li><a href="en/concepts/divs/2/div-state#state">state</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="dc-doc-page__body dc-doc-page__body_text-size_m yfm">
-                    <p>It contains sets of states for visual elements and switches between them.</p>
-                    <h2 id="parameters"><a href="en/concepts/divs/2/div-state#parameters" class="yfm-anchor"
-                            aria-hidden="true"></a>Parameters</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Parameters</th>
-                                <th>Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><code>states</code></td>
-                                <td>
-                                    <p><strong>array</strong></p>
-                                    <p>Required parameter.</p>
-                                    <p>States. Each element can have a few states with a different layout. Transition
-                                        between states is performed using <a href="en/concepts/interaction">special
-                                            scheme</a> of the <a href="en/concepts/divs/2/div-action">action</a> element.
-                                    </p>
-                                    <p>An array must not be empty.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>type</code></td>
-                                <td>
-                                    <p><strong>string</strong></p>
-                                    <p>Required parameter.</p>
-                                    <p>The value must always be <code>state</code>.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>accessibility</code></td>
-                                <td>
-                                    <p><strong>object</strong></p>
-                                    <p>Accessibility settings.</p>
-                                    <p>The value has the type <code>div-accessibility</code>.</p>
-                                    <p>Available platforms: Android, iOS, web.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>alignment_horizontal</code></td>
-                                <td>
-                                    <p><strong>string</strong></p>
-                                    <p>Horizontal alignment of an element inside the parent element.</p>
-                                    <p>Possible values: <code>left</code>, <code>center</code>, <code>right</code>,
-                                        <code>start</code>, <code>end</code>.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>alignment_vertical</code></td>
-                                <td>
-                                    <p><strong>string</strong></p>
-                                    <p>Vertical alignment of an element inside the parent element.</p>
-                                    <p>Possible values: <code>top</code>, <code>center</code>, <code>bottom</code>,
-                                        <code>baseline</code>.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>alpha</code></td>
-                                <td>
-                                    <p><strong>number</strong></p>
-                                    <p>Sets transparency of the entire element: <code>0</code> — completely transparent,
-                                        <code>1</code> — opaque.</p>
-                                    <p>Restriction for the value <code>x</code>:
-                                        <code>x &gt;= 0.0 &amp;&amp; x &lt;= 1.0</code>.</p>
-                                    <p>Default value: <code>1.0</code>.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>animators</code></td>
-                                <td>
-                                    <p><strong>array</strong></p>
-                                    <p>Declaration of animators that can be used to change the value of variables over time.
-                                    </p>
-                                    <p>Functionality is under development.</p>
-                                    <p>List of possible values:</p>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-color-animator#div-color-animator">div-color-animator</a>
-                                    </li>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-number-animator#div-number-animator">div-number-animator</a>
-                                    </li>
-                                    <p></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>background</code></td>
-                                <td>
-                                    <p><strong>array</strong></p>
-                                    <p>Element background. It can contain multiple layers.</p>
-                                    <p>List of possible values:</p>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-linear-gradient#div-linear-gradient">div-linear-gradient</a>
-                                    </li>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-radial-gradient#div-radial-gradient">div-radial-gradient</a>
-                                    </li>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-image-background#div-image-background">div-image-background</a>
-                                    </li>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-solid-background#div-solid-background">div-solid-background</a>
-                                    </li>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-nine-patch-background#div-nine-patch-background">div-nine-patch-background</a>
-                                    </li>
-                                    <p></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>border</code></td>
-                                <td>
-                                    <p><strong>object</strong></p>
-                                    <p>Element stroke.</p>
-                                    <p>The value has the type <code>div-border</code>.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>column_span</code></td>
-                                <td>
-                                    <p><strong>int</strong></p>
-                                    <p>Merges cells in a column of the <a href="en/concepts/divs/2/div-grid">grid</a>
-                                        element.</p>
-                                    <p>Restriction for the value <code>x</code>: <code>x &gt;= 0</code>.</p>
-                                    <p>Available platforms: Android, iOS, web.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>default_state_id</code></td>
-                                <td>
-                                    <p><strong>string</strong></p>
-                                    <p>ID of the status that will be set by default. If the parameter isnt set, the first
-                                        state of the <code>states</code> will be set.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>disappear_actions</code></td>
-                                <td>
-                                    <p><strong>array</strong></p>
-                                    <p>Actions when an element disappears from the screen.</p>
-                                    <p>Available platforms: Android, iOS, web.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>div_id</code></td>
-                                <td>
-                                    <p><strong>string</strong></p>
-                                    <p>Parameter is deprecated.</p>
-                                    <p>ID of an element to search in the hierarchy. The ID must be unique at one hierarchy
-                                        level.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>extensions</code></td>
-                                <td>
-                                    <p><strong>array</strong></p>
-                                    <p>Extensions for additional processing of an element. The list of extensions is given
-                                        in <a href="en/concepts/extensions">DivExtension</a>.</p>
-                                    <p>Available platforms: Android, iOS, web.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>focus</code></td>
-                                <td>
-                                    <p><strong>object</strong></p>
-                                    <p>Parameters when focusing on an element or losing focus.</p>
-                                    <p>The value has the type <code>div-focus</code>.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>functions</code></td>
-                                <td>
-                                    <p><strong>array</strong></p>
-                                    <p>Custom functions.</p>
-                                    <p>Available platforms: iOS.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>height</code></td>
-                                <td>
-                                    <p><strong>object</strong></p>
-                                    <p>Element height. For Android: if there is text in this or in a child element, specify
-                                        height in <code>sp</code> to scale the element together with the text. To learn more
-                                        about units of size measurement, see <a href="en/concepts/layout">Layout inside the
-                                            card</a>.</p>
-                                    <p>The value has the type <code>div-size</code>.</p>
-                                    <p>Default value: <code>{`{"type": "wrap_content"}`}</code>.</p>
-                                    <p>List of possible values:</p>
-                                    <li><a href="en/concepts/divs/2/div-fixed-size#div-fixed-size">div-fixed-size</a></li>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-match-parent-size#div-match-parent-size">div-match-parent-size</a>
-                                    </li>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-wrap-content-size#div-wrap-content-size">div-wrap-content-size</a>
-                                    </li>
-                                    <p></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>id</code></td>
-                                <td>
-                                    <p><strong>string</strong></p>
-                                    <p>Element ID. It must be unique within the root element. It is used as
-                                        <code>accessibilityIdentifier</code> on iOS.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>layout_provider</code></td>
-                                <td>
-                                    <p><strong>object</strong></p>
-                                    <p>Provides element real size values after a layout cycle.</p>
-                                    <p>The value has the type <code>div-layout-provider</code>.</p>
-                                    <p>Available platforms: Android, iOS, web.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>margins</code></td>
-                                <td>
-                                    <p><strong>object</strong></p>
-                                    <p>External margins from the element stroke.</p>
-                                    <p>The value has the type <code>div-edge-insets</code>.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>paddings</code></td>
-                                <td>
-                                    <p><strong>object</strong></p>
-                                    <p>Internal margins from the element stroke.</p>
-                                    <p>The value has the type <code>div-edge-insets</code>.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>reuse_id</code></td>
-                                <td>
-                                    <p><strong>string</strong></p>
-                                    <p>Id for the div structure. Used for more optimal reuse of blocks. See <a
-                                            href="en/concepts/reuse/reuse">reusing blocks</a></p>
-                                    <p>Available platforms: Android, iOS.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>row_span</code></td>
-                                <td>
-                                    <p><strong>int</strong></p>
-                                    <p>Merges cells in a string of the <a href="en/concepts/divs/2/div-grid">grid</a>
-                                        element.</p>
-                                    <p>Restriction for the value <code>x</code>: <code>x &gt;= 0</code>.</p>
-                                    <p>Available platforms: Android, iOS, web.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>selected_actions</code></td>
-                                <td>
-                                    <p><strong>array</strong></p>
-                                    <p>List of <a href="en/concepts/divs/2/div-action">actions</a> to be executed when
-                                        selecting an element in <a href="en/concepts/divs/2/div-pager">pager</a>.</p>
-                                    <p>Available platforms: Android, iOS, web.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>state_id_variable</code></td>
-                                <td>
-                                    <p><strong>string</strong></p>
-                                    <p>The name of the variable that stores the ID for the current state. If the variable
-                                        changes, the active state will also change. The variable is prioritized over the
-                                        default_state_id parameter.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>tooltips</code></td>
-                                <td>
-                                    <p><strong>array</strong></p>
-                                    <p>Tooltips linked to an element. A tooltip can be shown by
-                                        <code>div-action://show_tooltip?id=</code>, hidden by
-                                        <code>div-action://hide_tooltip?id=</code> where <code>id</code> — tooltip id.</p>
-                                    <p>Available platforms: Android, iOS, web.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>transform</code></td>
-                                <td>
-                                    <p><strong>object</strong></p>
-                                    <p>Applies the passed transformation to the element. Content that doesn't fit into the
-                                        original view area is cut off.</p>
-                                    <p>The value has the type <code>div-transform</code>.</p>
-                                    <p>Available platforms: Android, iOS, web.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>transition_animation_selector</code></td>
-                                <td>
-                                    <p><strong>string</strong></p>
-                                    <p>Parameter is deprecated.</p>
-                                    <p>It determines which events trigger transition animations.</p>
-                                    <p>Possible values: <code>none</code>, <code>data_change</code>,
-                                        <code>state_change</code>, <code>any_change</code>.</p>
-                                    <p>Default value: <code>state_change</code>.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>transition_change</code></td>
-                                <td>
-                                    <p><strong>object</strong></p>
-                                    <p>Change animation. It is played when the position or size of an element changes in the
-                                        new layout.</p>
-                                    <p>The value has the type <code>div-change-transition</code>.</p>
-                                    <p>Available platforms: Android, iOS, web.</p>
-                                    <p>List of possible values:</p>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-change-set-transition#div-change-set-transition">div-change-set-transition</a>
-                                    </li>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-change-bounds-transition#div-change-bounds-transition">div-change-bounds-transition</a>
-                                    </li>
-                                    <p></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>transition_in</code></td>
-                                <td>
-                                    <p><strong>object</strong></p>
-                                    <p>Appearance animation. It is played when an element with a new ID appears. To learn
-                                        more about the concept of transitions, see <a
-                                            href="en/concepts/interaction#animation/transition-animation">Animated
-                                            transitions</a>.</p>
-                                    <p>The value has the type <code>div-appearance-transition</code>.</p>
-                                    <p>Available platforms: Android, iOS, web.</p>
-                                    <p>List of possible values:</p>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-appearance-set-transition#div-appearance-set-transition">div-appearance-set-transition</a>
-                                    </li>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-fade-transition#div-fade-transition">div-fade-transition</a>
-                                    </li>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-scale-transition#div-scale-transition">div-scale-transition</a>
-                                    </li>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-slide-transition#div-slide-transition">div-slide-transition</a>
-                                    </li>
-                                    <p></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>transition_out</code></td>
-                                <td>
-                                    <p><strong>object</strong></p>
-                                    <p>Disappearance animation. It is played when an element disappears in the new layout.
-                                    </p>
-                                    <p>The value has the type <code>div-appearance-transition</code>.</p>
-                                    <p>Available platforms: Android, iOS, web.</p>
-                                    <p>List of possible values:</p>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-appearance-set-transition#div-appearance-set-transition">div-appearance-set-transition</a>
-                                    </li>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-fade-transition#div-fade-transition">div-fade-transition</a>
-                                    </li>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-scale-transition#div-scale-transition">div-scale-transition</a>
-                                    </li>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-slide-transition#div-slide-transition">div-slide-transition</a>
-                                    </li>
-                                    <p></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>transition_triggers</code></td>
-                                <td>
-                                    <p><strong>array</strong></p>
-                                    <p>Animation starting triggers. Default value:
-                                        <code>[state_change, visibility_change]</code>.</p>
-                                    <p>An array must not be empty.</p>
-                                    <p>Available platforms: Android, iOS, web.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>variable_triggers</code></td>
-                                <td>
-                                    <p><strong>array</strong></p>
-                                    <p>Triggers for changing variables within an element.</p>
-                                    <p>Available platforms: Android, iOS.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>variables</code></td>
-                                <td>
-                                    <p><strong>array</strong></p>
-                                    <p>Definition of variables that can be used within this element. These variables,
-                                        defined in the array, can only be used inside this element and its children.</p>
-                                    <p>Available platforms: iOS, web, Android.</p>
-                                    <p>List of possible values:</p>
-                                    <li><a href="en/concepts/divs/2/string_variable#string_variable">string_variable</a>
-                                    </li>
-                                    <li><a href="en/concepts/divs/2/number_variable#number_variable">number_variable</a>
-                                    </li>
-                                    <li><a href="en/concepts/divs/2/integer_variable#integer_variable">integer_variable</a>
-                                    </li>
-                                    <li><a href="en/concepts/divs/2/boolean_variable#boolean_variable">boolean_variable</a>
-                                    </li>
-                                    <li><a href="en/concepts/divs/2/color_variable#color_variable">color_variable</a></li>
-                                    <li><a href="en/concepts/divs/2/url_variable#url_variable">url_variable</a></li>
-                                    <li><a href="en/concepts/divs/2/dict_variable#dict_variable">dict_variable</a></li>
-                                    <li><a href="en/concepts/divs/2/array_variable#array_variable">array_variable</a></li>
-                                    <p></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>visibility</code></td>
-                                <td>
-                                    <p><strong>string</strong></p>
-                                    <p>Element visibility.</p>
-                                    <p>Possible values: <code>visible</code>, <code>invisible</code>, <code>gone</code>.</p>
-                                    <p>Default value: <code>visible</code>.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>visibility_action</code></td>
-                                <td>
-                                    <p><strong>object</strong></p>
-                                    <p>Tracking visibility of a single element. Not used if the
-                                        <code>visibility_actions</code> parameter is set.</p>
-                                    <p>The value has the type <code>div-visibility-action</code>.</p>
-                                    <p>Available platforms: Android, iOS, web.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>visibility_actions</code></td>
-                                <td>
-                                    <p><strong>array</strong></p>
-                                    <p>Actions when an element appears on the screen.</p>
-                                    <p>Available platforms: Android, iOS, web.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>width</code></td>
-                                <td>
-                                    <p><strong>object</strong></p>
-                                    <p>Element width.</p>
-                                    <p>The value has the type <code>div-size</code>.</p>
-                                    <p>Default value: <code>{`{"type": "match_parent"}`}</code>.</p>
-                                    <p>List of possible values:</p>
-                                    <li><a href="en/concepts/divs/2/div-fixed-size#div-fixed-size">div-fixed-size</a></li>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-match-parent-size#div-match-parent-size">div-match-parent-size</a>
-                                    </li>
-                                    <li><a
-                                            href="en/concepts/divs/2/div-wrap-content-size#div-wrap-content-size">div-wrap-content-size</a>
-                                    </li>
-                                    <p></p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <h3 id="state"><a href="en/concepts/divs/2/div-state#state" class="yfm-anchor"
-                            aria-hidden="true"></a>state</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Parameters</th>
-                                <th>Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><code>state_id</code></td>
-                                <td>
-                                    <p><strong>string</strong></p>
-                                    <p>Required parameter.</p>
-                                    <p>State ID. It must be unique at one hierarchy level.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>animation_in</code></td>
-                                <td>
-                                    <p><strong>object</strong></p>
-                                    <p>Parameter is deprecated.</p>
-                                    <p>State appearance animation. Use <code>transition_in</code> instead.</p>
-                                    <p>The value has the type <code>div-animation</code>.</p>
-                                    <p>Available platforms: Android, iOS.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>animation_out</code></td>
-                                <td>
-                                    <p><strong>object</strong></p>
-                                    <p>Parameter is deprecated.</p>
-                                    <p>State disappearance animation. Use <code>transition_out</code> instead.</p>
-                                    <p>The value has the type <code>div-animation</code>.</p>
-                                    <p>Available platforms: Android, iOS.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>div</code></td>
-                                <td>
-                                    <p><strong>object</strong></p>
-                                    <p>Contents. If the parameter is missing, the state won't be displayed.</p>
-                                    <p>The value has the type <code>div</code>.</p>
-                                    <p>List of possible values:</p>
-                                    <li><a href="en/concepts/divs/2/div-image#div-image">div-image</a></li>
-                                    <li><a href="en/concepts/divs/2/div-gif-image#div-gif-image">div-gif-image</a></li>
-                                    <li><a href="en/concepts/divs/2/div-text#div-text">div-text</a></li>
-                                    <li><a href="en/concepts/divs/2/div-separator#div-separator">div-separator</a></li>
-                                    <li><a href="en/concepts/divs/2/div-container#div-container">div-container</a></li>
-                                    <li><a href="en/concepts/divs/2/div-grid#div-grid">div-grid</a></li>
-                                    <li><a href="en/concepts/divs/2/div-gallery#div-gallery">div-gallery</a></li>
-                                    <li><a href="en/concepts/divs/2/div-pager#div-pager">div-pager</a></li>
-                                    <li><a href="en/concepts/divs/2/div-tabs#div-tabs">div-tabs</a></li>
-                                    <li><a href="en/concepts/divs/2/div-state#div-state">div-state</a></li>
-                                    <li><a href="en/concepts/divs/2/div-custom#div-custom">div-custom</a></li>
-                                    <li><a href="en/concepts/divs/2/div-indicator#div-indicator">div-indicator</a></li>
-                                    <li><a href="en/concepts/divs/2/div-slider#div-slider">div-slider</a></li>
-                                    <li><a href="en/concepts/divs/2/div-input#div-input">div-input</a></li>
-                                    <li><a href="en/concepts/divs/2/div-select#div-select">div-select</a></li>
-                                    <li><a href="en/concepts/divs/2/div-video#div-video">div-video</a></li>
-                                    <p></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>swipe_out_actions</code></td>
-                                <td>
-                                    <p><strong>array</strong></p>
-                                    <p>Parameter is deprecated.</p>
-                                    <p>Actions when swiping the state horizontally.</p>
-                                    <p>Available platforms: Android.</p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <details>
-                        <summary>JSON</summary>
-    
-                        <div class="yfm-clipboard">
-                            <pre><code class="hljs json">
-                                {`{
+      </div>
+      <div class="dc-doc-page__main">
+        <main class="dc-doc-page__content">
+          <h1 class="dc-doc-page-title dc-doc-page__title">
+            <span>div-state</span>
+          </h1>
+          <div class="dc-doc-page__page-contributors"></div>
+          <div class="dc-doc-page__content-mini-toc yfm">
+            <ul>
+              <li>
+                <a href="en/concepts/divs/2/div-state#parameters">Parameters</a>
+                <ul>
+                  <li>
+                    <a href="en/concepts/divs/2/div-state#state">state</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="dc-doc-page__body dc-doc-page__body_text-size_m yfm">
+            <p>
+              It contains sets of states for visual elements and switches
+              between them.
+            </p>
+            <h2 id="parameters">
+              <a
+                href="en/concepts/divs/2/div-state#parameters"
+                class="yfm-anchor"
+                aria-hidden="true"
+              ></a>
+              Parameters
+            </h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Parameters</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>states</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>array</strong>
+                    </p>
+                    <p>Required parameter.</p>
+                    <p>
+                      States. Each element can have a few states with a
+                      different layout. Transition between states is performed
+                      using <a href="en/concepts/interaction">special scheme</a>{" "}
+                      of the <a href="en/concepts/divs/2/div-action">action</a>{" "}
+                      element.
+                    </p>
+                    <p>An array must not be empty.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>type</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>string</strong>
+                    </p>
+                    <p>Required parameter.</p>
+                    <p>
+                      The value must always be <code>state</code>.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>accessibility</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>object</strong>
+                    </p>
+                    <p>Accessibility settings.</p>
+                    <p>
+                      The value has the type <code>div-accessibility</code>.
+                    </p>
+                    <p>Available platforms: Android, iOS, web.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>alignment_horizontal</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>string</strong>
+                    </p>
+                    <p>
+                      Horizontal alignment of an element inside the parent
+                      element.
+                    </p>
+                    <p>
+                      Possible values: <code>left</code>, <code>center</code>,{" "}
+                      <code>right</code>,<code>start</code>, <code>end</code>.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>alignment_vertical</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>string</strong>
+                    </p>
+                    <p>
+                      Vertical alignment of an element inside the parent
+                      element.
+                    </p>
+                    <p>
+                      Possible values: <code>top</code>, <code>center</code>,{" "}
+                      <code>bottom</code>,<code>baseline</code>.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>alpha</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>number</strong>
+                    </p>
+                    <p>
+                      Sets transparency of the entire element: <code>0</code> —
+                      completely transparent,
+                      <code>1</code> — opaque.
+                    </p>
+                    <p>
+                      Restriction for the value <code>x</code>:
+                      <code>x &gt;= 0.0 &amp;&amp; x &lt;= 1.0</code>.
+                    </p>
+                    <p>
+                      Default value: <code>1.0</code>.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>animators</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>array</strong>
+                    </p>
+                    <p>
+                      Declaration of animators that can be used to change the
+                      value of variables over time.
+                    </p>
+                    <p>Functionality is under development.</p>
+                    <p>List of possible values:</p>
+                    <li>
+                      <a href="en/concepts/divs/2/div-color-animator#div-color-animator">
+                        div-color-animator
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-number-animator#div-number-animator">
+                        div-number-animator
+                      </a>
+                    </li>
+                    <p></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>background</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>array</strong>
+                    </p>
+                    <p>Element background. It can contain multiple layers.</p>
+                    <p>List of possible values:</p>
+                    <li>
+                      <a href="en/concepts/divs/2/div-linear-gradient#div-linear-gradient">
+                        div-linear-gradient
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-radial-gradient#div-radial-gradient">
+                        div-radial-gradient
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-image-background#div-image-background">
+                        div-image-background
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-solid-background#div-solid-background">
+                        div-solid-background
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-nine-patch-background#div-nine-patch-background">
+                        div-nine-patch-background
+                      </a>
+                    </li>
+                    <p></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>border</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>object</strong>
+                    </p>
+                    <p>Element stroke.</p>
+                    <p>
+                      The value has the type <code>div-border</code>.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>column_span</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>int</strong>
+                    </p>
+                    <p>
+                      Merges cells in a column of the{" "}
+                      <a href="en/concepts/divs/2/div-grid">grid</a>
+                      element.
+                    </p>
+                    <p>
+                      Restriction for the value <code>x</code>:{" "}
+                      <code>x &gt;= 0</code>.
+                    </p>
+                    <p>Available platforms: Android, iOS, web.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>default_state_id</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>string</strong>
+                    </p>
+                    <p>
+                      ID of the status that will be set by default. If the
+                      parameter isnt set, the first state of the{" "}
+                      <code>states</code> will be set.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>disappear_actions</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>array</strong>
+                    </p>
+                    <p>Actions when an element disappears from the screen.</p>
+                    <p>Available platforms: Android, iOS, web.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>div_id</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>string</strong>
+                    </p>
+                    <p>Parameter is deprecated.</p>
+                    <p>
+                      ID of an element to search in the hierarchy. The ID must
+                      be unique at one hierarchy level.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>extensions</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>array</strong>
+                    </p>
+                    <p>
+                      Extensions for additional processing of an element. The
+                      list of extensions is given in{" "}
+                      <a href="en/concepts/extensions">DivExtension</a>.
+                    </p>
+                    <p>Available platforms: Android, iOS, web.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>focus</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>object</strong>
+                    </p>
+                    <p>
+                      Parameters when focusing on an element or losing focus.
+                    </p>
+                    <p>
+                      The value has the type <code>div-focus</code>.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>functions</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>array</strong>
+                    </p>
+                    <p>Custom functions.</p>
+                    <p>Available platforms: iOS.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>height</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>object</strong>
+                    </p>
+                    <p>
+                      Element height. For Android: if there is text in this or
+                      in a child element, specify height in <code>sp</code> to
+                      scale the element together with the text. To learn more
+                      about units of size measurement, see{" "}
+                      <a href="en/concepts/layout">Layout inside the card</a>.
+                    </p>
+                    <p>
+                      The value has the type <code>div-size</code>.
+                    </p>
+                    <p>
+                      Default value: <code>{`{"type": "wrap_content"}`}</code>.
+                    </p>
+                    <p>List of possible values:</p>
+                    <li>
+                      <a href="en/concepts/divs/2/div-fixed-size#div-fixed-size">
+                        div-fixed-size
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-match-parent-size#div-match-parent-size">
+                        div-match-parent-size
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-wrap-content-size#div-wrap-content-size">
+                        div-wrap-content-size
+                      </a>
+                    </li>
+                    <p></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>id</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>string</strong>
+                    </p>
+                    <p>
+                      Element ID. It must be unique within the root element. It
+                      is used as
+                      <code>accessibilityIdentifier</code> on iOS.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>layout_provider</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>object</strong>
+                    </p>
+                    <p>
+                      Provides element real size values after a layout cycle.
+                    </p>
+                    <p>
+                      The value has the type <code>div-layout-provider</code>.
+                    </p>
+                    <p>Available platforms: Android, iOS, web.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>margins</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>object</strong>
+                    </p>
+                    <p>External margins from the element stroke.</p>
+                    <p>
+                      The value has the type <code>div-edge-insets</code>.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>paddings</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>object</strong>
+                    </p>
+                    <p>Internal margins from the element stroke.</p>
+                    <p>
+                      The value has the type <code>div-edge-insets</code>.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>reuse_id</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>string</strong>
+                    </p>
+                    <p>
+                      Id for the div structure. Used for more optimal reuse of
+                      blocks. See{" "}
+                      <a href="en/concepts/reuse/reuse">reusing blocks</a>
+                    </p>
+                    <p>Available platforms: Android, iOS.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>row_span</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>int</strong>
+                    </p>
+                    <p>
+                      Merges cells in a string of the{" "}
+                      <a href="en/concepts/divs/2/div-grid">grid</a>
+                      element.
+                    </p>
+                    <p>
+                      Restriction for the value <code>x</code>:{" "}
+                      <code>x &gt;= 0</code>.
+                    </p>
+                    <p>Available platforms: Android, iOS, web.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>selected_actions</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>array</strong>
+                    </p>
+                    <p>
+                      List of{" "}
+                      <a href="en/concepts/divs/2/div-action">actions</a> to be
+                      executed when selecting an element in{" "}
+                      <a href="en/concepts/divs/2/div-pager">pager</a>.
+                    </p>
+                    <p>Available platforms: Android, iOS, web.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>state_id_variable</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>string</strong>
+                    </p>
+                    <p>
+                      The name of the variable that stores the ID for the
+                      current state. If the variable changes, the active state
+                      will also change. The variable is prioritized over the
+                      default_state_id parameter.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>tooltips</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>array</strong>
+                    </p>
+                    <p>
+                      Tooltips linked to an element. A tooltip can be shown by
+                      <code>div-action://show_tooltip?id=</code>, hidden by
+                      <code>div-action://hide_tooltip?id=</code> where{" "}
+                      <code>id</code> — tooltip id.
+                    </p>
+                    <p>Available platforms: Android, iOS, web.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>transform</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>object</strong>
+                    </p>
+                    <p>
+                      Applies the passed transformation to the element. Content
+                      that doesn't fit into the original view area is cut off.
+                    </p>
+                    <p>
+                      The value has the type <code>div-transform</code>.
+                    </p>
+                    <p>Available platforms: Android, iOS, web.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>transition_animation_selector</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>string</strong>
+                    </p>
+                    <p>Parameter is deprecated.</p>
+                    <p>
+                      It determines which events trigger transition animations.
+                    </p>
+                    <p>
+                      Possible values: <code>none</code>,{" "}
+                      <code>data_change</code>,<code>state_change</code>,{" "}
+                      <code>any_change</code>.
+                    </p>
+                    <p>
+                      Default value: <code>state_change</code>.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>transition_change</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>object</strong>
+                    </p>
+                    <p>
+                      Change animation. It is played when the position or size
+                      of an element changes in the new layout.
+                    </p>
+                    <p>
+                      The value has the type <code>div-change-transition</code>.
+                    </p>
+                    <p>Available platforms: Android, iOS, web.</p>
+                    <p>List of possible values:</p>
+                    <li>
+                      <a href="en/concepts/divs/2/div-change-set-transition#div-change-set-transition">
+                        div-change-set-transition
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-change-bounds-transition#div-change-bounds-transition">
+                        div-change-bounds-transition
+                      </a>
+                    </li>
+                    <p></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>transition_in</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>object</strong>
+                    </p>
+                    <p>
+                      Appearance animation. It is played when an element with a
+                      new ID appears. To learn more about the concept of
+                      transitions, see{" "}
+                      <a href="en/concepts/interaction#animation/transition-animation">
+                        Animated transitions
+                      </a>
+                      .
+                    </p>
+                    <p>
+                      The value has the type{" "}
+                      <code>div-appearance-transition</code>.
+                    </p>
+                    <p>Available platforms: Android, iOS, web.</p>
+                    <p>List of possible values:</p>
+                    <li>
+                      <a href="en/concepts/divs/2/div-appearance-set-transition#div-appearance-set-transition">
+                        div-appearance-set-transition
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-fade-transition#div-fade-transition">
+                        div-fade-transition
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-scale-transition#div-scale-transition">
+                        div-scale-transition
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-slide-transition#div-slide-transition">
+                        div-slide-transition
+                      </a>
+                    </li>
+                    <p></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>transition_out</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>object</strong>
+                    </p>
+                    <p>
+                      Disappearance animation. It is played when an element
+                      disappears in the new layout.
+                    </p>
+                    <p>
+                      The value has the type{" "}
+                      <code>div-appearance-transition</code>.
+                    </p>
+                    <p>Available platforms: Android, iOS, web.</p>
+                    <p>List of possible values:</p>
+                    <li>
+                      <a href="en/concepts/divs/2/div-appearance-set-transition#div-appearance-set-transition">
+                        div-appearance-set-transition
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-fade-transition#div-fade-transition">
+                        div-fade-transition
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-scale-transition#div-scale-transition">
+                        div-scale-transition
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-slide-transition#div-slide-transition">
+                        div-slide-transition
+                      </a>
+                    </li>
+                    <p></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>transition_triggers</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>array</strong>
+                    </p>
+                    <p>
+                      Animation starting triggers. Default value:
+                      <code>[state_change, visibility_change]</code>.
+                    </p>
+                    <p>An array must not be empty.</p>
+                    <p>Available platforms: Android, iOS, web.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>variable_triggers</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>array</strong>
+                    </p>
+                    <p>Triggers for changing variables within an element.</p>
+                    <p>Available platforms: Android, iOS.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>variables</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>array</strong>
+                    </p>
+                    <p>
+                      Definition of variables that can be used within this
+                      element. These variables, defined in the array, can only
+                      be used inside this element and its children.
+                    </p>
+                    <p>Available platforms: iOS, web, Android.</p>
+                    <p>List of possible values:</p>
+                    <li>
+                      <a href="en/concepts/divs/2/string_variable#string_variable">
+                        string_variable
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/number_variable#number_variable">
+                        number_variable
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/integer_variable#integer_variable">
+                        integer_variable
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/boolean_variable#boolean_variable">
+                        boolean_variable
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/color_variable#color_variable">
+                        color_variable
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/url_variable#url_variable">
+                        url_variable
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/dict_variable#dict_variable">
+                        dict_variable
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/array_variable#array_variable">
+                        array_variable
+                      </a>
+                    </li>
+                    <p></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>visibility</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>string</strong>
+                    </p>
+                    <p>Element visibility.</p>
+                    <p>
+                      Possible values: <code>visible</code>,{" "}
+                      <code>invisible</code>, <code>gone</code>.
+                    </p>
+                    <p>
+                      Default value: <code>visible</code>.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>visibility_action</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>object</strong>
+                    </p>
+                    <p>
+                      Tracking visibility of a single element. Not used if the
+                      <code>visibility_actions</code> parameter is set.
+                    </p>
+                    <p>
+                      The value has the type <code>div-visibility-action</code>.
+                    </p>
+                    <p>Available platforms: Android, iOS, web.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>visibility_actions</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>array</strong>
+                    </p>
+                    <p>Actions when an element appears on the screen.</p>
+                    <p>Available platforms: Android, iOS, web.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>width</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>object</strong>
+                    </p>
+                    <p>Element width.</p>
+                    <p>
+                      The value has the type <code>div-size</code>.
+                    </p>
+                    <p>
+                      Default value: <code>{`{"type": "match_parent"}`}</code>.
+                    </p>
+                    <p>List of possible values:</p>
+                    <li>
+                      <a href="en/concepts/divs/2/div-fixed-size#div-fixed-size">
+                        div-fixed-size
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-match-parent-size#div-match-parent-size">
+                        div-match-parent-size
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-wrap-content-size#div-wrap-content-size">
+                        div-wrap-content-size
+                      </a>
+                    </li>
+                    <p></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 id="state">
+              <a
+                href="en/concepts/divs/2/div-state#state"
+                class="yfm-anchor"
+                aria-hidden="true"
+              ></a>
+              state
+            </h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Parameters</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>state_id</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>string</strong>
+                    </p>
+                    <p>Required parameter.</p>
+                    <p>State ID. It must be unique at one hierarchy level.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>animation_in</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>object</strong>
+                    </p>
+                    <p>Parameter is deprecated.</p>
+                    <p>
+                      State appearance animation. Use <code>transition_in</code>{" "}
+                      instead.
+                    </p>
+                    <p>
+                      The value has the type <code>div-animation</code>.
+                    </p>
+                    <p>Available platforms: Android, iOS.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>animation_out</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>object</strong>
+                    </p>
+                    <p>Parameter is deprecated.</p>
+                    <p>
+                      State disappearance animation. Use{" "}
+                      <code>transition_out</code> instead.
+                    </p>
+                    <p>
+                      The value has the type <code>div-animation</code>.
+                    </p>
+                    <p>Available platforms: Android, iOS.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>div</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>object</strong>
+                    </p>
+                    <p>
+                      Contents. If the parameter is missing, the state won't be
+                      displayed.
+                    </p>
+                    <p>
+                      The value has the type <code>div</code>.
+                    </p>
+                    <p>List of possible values:</p>
+                    <li>
+                      <a href="en/concepts/divs/2/div-image#div-image">
+                        div-image
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-gif-image#div-gif-image">
+                        div-gif-image
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-text#div-text">
+                        div-text
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-separator#div-separator">
+                        div-separator
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-container#div-container">
+                        div-container
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-grid#div-grid">
+                        div-grid
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-gallery#div-gallery">
+                        div-gallery
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-pager#div-pager">
+                        div-pager
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-tabs#div-tabs">
+                        div-tabs
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-state#div-state">
+                        div-state
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-custom#div-custom">
+                        div-custom
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-indicator#div-indicator">
+                        div-indicator
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-slider#div-slider">
+                        div-slider
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-input#div-input">
+                        div-input
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-select#div-select">
+                        div-select
+                      </a>
+                    </li>
+                    <li>
+                      <a href="en/concepts/divs/2/div-video#div-video">
+                        div-video
+                      </a>
+                    </li>
+                    <p></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>swipe_out_actions</code>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>array</strong>
+                    </p>
+                    <p>Parameter is deprecated.</p>
+                    <p>Actions when swiping the state horizontally.</p>
+                    <p>Available platforms: Android.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <details>
+              <summary>JSON</summary>
+
+              <div class="yfm-clipboard">
+                <pre>
+                  <code class="hljs json">
+                    {`{
                                     type*: "state",
                                     accessibility: {
                                       description: "string",
@@ -1130,85 +1673,177 @@ const Component = () => {
                                     width: div-size
                                   }
                                   `}
-                            </code></pre>
-    
-                            <button class="yfm-clipboard-button" aria-label="Copy">
-                                <svg width="16" height="16" viewBox="0 0 24 24" class="yfm-clipboard-icon"
-                                    data-animation="382">
-                                    <path fill="currentColor"
-                                        d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
-                                    </path>
-                                    <path stroke="currentColor" fill="transparent" stroke-width="1.5" d="M9.5 13l3 3l5 -5"
-                                        visibility="hidden">
-                                        <animate id="visibileAnimation-382" attributeName="visibility" from="hidden"
-                                            to="visible" dur="0.2s" fill="freeze" begin=""></animate>
-                                        <animate id="hideAnimation-382" attributeName="visibility" from="visible"
-                                            to="hidden" dur="1s" begin="visibileAnimation-382.end+1" fill="freeze">
-                                        </animate>
-                                    </path>
-                                </svg>
-                            </button>
-                        </div>
-                    </details>
+                  </code>
+                </pre>
+
+                <button class="yfm-clipboard-button" aria-label="Copy">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    class="yfm-clipboard-icon"
+                    data-animation="382"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+                    ></path>
+                    <path
+                      stroke="currentColor"
+                      fill="transparent"
+                      stroke-width="1.5"
+                      d="M9.5 13l3 3l5 -5"
+                      visibility="hidden"
+                    >
+                      <animate
+                        id="visibileAnimation-382"
+                        attributeName="visibility"
+                        from="hidden"
+                        to="visible"
+                        dur="0.2s"
+                        fill="freeze"
+                        begin=""
+                      ></animate>
+                      <animate
+                        id="hideAnimation-382"
+                        attributeName="visibility"
+                        from="visible"
+                        to="hidden"
+                        dur="1s"
+                        begin="visibileAnimation-382.end+1"
+                        fill="freeze"
+                      ></animate>
+                    </path>
+                  </svg>
+                </button>
+              </div>
+            </details>
+          </div>
+          <div class="dc-doc-page__feedback">
+            <div class="dc-feedback__container dc-feedback__container_view_wide">
+              <div class="dc-feedback__container-col dc-feedback__container-col_view_wide">
+                <h3 class="dc-feedback__title dc-feedback__title_view_wide">
+                  Was the article helpful?
+                </h3>
+                <div class="dc-feedback__controls dc-feedback__controls_view_wide">
+                  <button
+                    class="g-button g-button_view_normal g-button_size_m g-button_pin_round-round dc-feedback__control dc-feedback__control_view_wide"
+                    type="button"
+                  >
+                    <span class="g-button__icon g-button__icon_side_start">
+                      <span class="g-button__icon-inner">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          fill="none"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                            d="m4 7 2.94-5.041a1.932 1.932 0 0 1 3.56 1.378L10.25 4.5 9.93 6h2.94a2 2 0 0 1 1.927 2.535l-.879 3.162A4 4 0 0 1 9.596 14.6L4.5 14 4 7Zm5.771 6.11-3.863-.455-.379-5.3 2.708-4.64a.432.432 0 0 1 .796.308l-.571 2.663L8.073 7.5h4.796a.5.5 0 0 1 .482.634l-.879 3.162a2.5 2.5 0 0 1-2.7 1.814ZM2.748 7.447a.75.75 0 1 0-1.496.106l.5 7a.75.75 0 0 0 1.496-.106l-.5-7Z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </span>
+                    </span>
+                    <span class="g-button__text">Yes</span>
+                  </button>
+                  <button
+                    class="g-button g-button_view_normal g-button_size_m g-button_pin_round-round dc-feedback__control dc-feedback__control_view_wide"
+                    type="button"
+                  >
+                    <span class="g-button__icon g-button__icon_side_start">
+                      <span class="g-button__icon-inner">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          fill="none"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                            d="m12 9-2.94 5.041a1.932 1.932 0 0 1-3.56-1.378l.25-1.163.321-1.5h-2.94a2 2 0 0 1-1.927-2.535l.879-3.162A4 4 0 0 1 6.404 1.4L11.5 2l.5 7ZM6.229 2.89l3.863.455.379 5.3-2.708 4.64a.432.432 0 0 1-.796-.308l.571-2.663.389-1.814H3.13a.5.5 0 0 1-.482-.634l.879-3.162a2.5 2.5 0 0 1 2.7-1.814Zm7.023 5.663a.75.75 0 1 0 1.496-.106l-.5-7a.75.75 0 0 0-1.496.106l.5 7Z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </span>
+                    </span>
+                    <span class="g-button__text">No</span>
+                  </button>
                 </div>
-                <div class="dc-doc-page__feedback">
-                    <div class="dc-feedback__container dc-feedback__container_view_wide">
-                        <div class="dc-feedback__container-col dc-feedback__container-col_view_wide">
-                            <h3 class="dc-feedback__title dc-feedback__title_view_wide">Was the article helpful?</h3>
-                            <div class="dc-feedback__controls dc-feedback__controls_view_wide"><button
-                                    class="g-button g-button_view_normal g-button_size_m g-button_pin_round-round dc-feedback__control dc-feedback__control_view_wide"
-                                    type="button"><span class="g-button__icon g-button__icon_side_start"><span
-                                            class="g-button__icon-inner"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-                                                height="20" fill="none" viewBox="0 0 16 16">
-                                                <path fill="currentColor" fill-rule="evenodd"
-                                                    d="m4 7 2.94-5.041a1.932 1.932 0 0 1 3.56 1.378L10.25 4.5 9.93 6h2.94a2 2 0 0 1 1.927 2.535l-.879 3.162A4 4 0 0 1 9.596 14.6L4.5 14 4 7Zm5.771 6.11-3.863-.455-.379-5.3 2.708-4.64a.432.432 0 0 1 .796.308l-.571 2.663L8.073 7.5h4.796a.5.5 0 0 1 .482.634l-.879 3.162a2.5 2.5 0 0 1-2.7 1.814ZM2.748 7.447a.75.75 0 1 0-1.496.106l.5 7a.75.75 0 0 0 1.496-.106l-.5-7Z"
-                                                    clip-rule="evenodd"></path>
-                                            </svg></span></span><span class="g-button__text">Yes</span></button><button
-                                    class="g-button g-button_view_normal g-button_size_m g-button_pin_round-round dc-feedback__control dc-feedback__control_view_wide"
-                                    type="button"><span class="g-button__icon g-button__icon_side_start"><span
-                                            class="g-button__icon-inner"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-                                                height="20" fill="none" viewBox="0 0 16 16">
-                                                <path fill="currentColor" fill-rule="evenodd"
-                                                    d="m12 9-2.94 5.041a1.932 1.932 0 0 1-3.56-1.378l.25-1.163.321-1.5h-2.94a2 2 0 0 1-1.927-2.535l.879-3.162A4 4 0 0 1 6.404 1.4L11.5 2l.5 7ZM6.229 2.89l3.863.455.379 5.3-2.708 4.64a.432.432 0 0 1-.796-.308l.571-2.663.389-1.814H3.13a.5.5 0 0 1-.482-.634l.879-3.162a2.5 2.5 0 0 1 2.7-1.814Zm7.023 5.663a.75.75 0 1 0 1.496-.106l-.5-7a.75.75 0 0 0-1.496.106l.5 7Z"
-                                                    clip-rule="evenodd"></path>
-                                            </svg></span></span><span class="g-button__text">No</span></button></div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-            <div class="dc-nav-toc-panel dc-doc-page__toc-nav-panel">
-                <div class="dc-nav-toc-panel__content">
-                    <div class="dc-nav-toc-panel__control dc-nav-toc-panel__control_left">
-                        <div class="dc-nav-toc-panel__control-hint">Previous</div>
-                        <div class="dc-nav-toc-panel__control-text"><a href="en/concepts/divs/2/div-slider" target="_self"
-                                class="dc-nav-toc-panel__link" data-router-shallow="true"><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                                    viewBox="0 0 16 16">
-                                    <path fill="currentColor" fill-rule="evenodd"
-                                        d="M14.75 8a.75.75 0 0 1-.75.75H3.81l2.72 2.72a.75.75 0 1 1-1.06 1.06l-4-4a.75.75 0 0 1 0-1.06l4-4a.75.75 0 0 1 1.06 1.06L3.81 7.25H14a.75.75 0 0 1 .75.75Z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                <div class="dc-nav-toc-panel__control-name">slider</div>
-                            </a></div>
-                    </div>
-                    <div class="dc-nav-toc-panel__control dc-nav-toc-panel__control_right">
-                        <div class="dc-nav-toc-panel__control-hint">Next</div>
-                        <div class="dc-nav-toc-panel__control-text"><a href="en/concepts/divs/2/div-tabs" target="_self"
-                                class="dc-nav-toc-panel__link" data-router-shallow="true">
-                                <div class="dc-nav-toc-panel__control-name">tabs</div><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                                    viewBox="0 0 16 16">
-                                    <path fill="currentColor" fill-rule="evenodd"
-                                        d="M1.25 8A.75.75 0 0 1 2 7.25h10.19L9.47 4.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H2A.75.75 0 0 1 1.25 8Z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </a></div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+        </main>
+        <div class="dc-nav-toc-panel dc-doc-page__toc-nav-panel">
+          <div class="dc-nav-toc-panel__content">
+            <div class="dc-nav-toc-panel__control dc-nav-toc-panel__control_left">
+              <div class="dc-nav-toc-panel__control-hint">Previous</div>
+              <div class="dc-nav-toc-panel__control-text">
+                <a
+                  onClick={() =>
+                    navigate("/element-directory/basic-elements/slider")
+                  }
+                  target="_self"
+                  class="dc-nav-toc-panel__link"
+                  data-router-shallow="true"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M14.75 8a.75.75 0 0 1-.75.75H3.81l2.72 2.72a.75.75 0 1 1-1.06 1.06l-4-4a.75.75 0 0 1 0-1.06l4-4a.75.75 0 0 1 1.06 1.06L3.81 7.25H14a.75.75 0 0 1 .75.75Z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <div class="dc-nav-toc-panel__control-name">slider</div>
+                </a>
+              </div>
+            </div>
+            <div class="dc-nav-toc-panel__control dc-nav-toc-panel__control_right">
+              <div class="dc-nav-toc-panel__control-hint">Next</div>
+              <div class="dc-nav-toc-panel__control-text">
+                <a
+                  onClick={() =>
+                    navigate("/element-directory/basic-elements/tabs")
+                  }
+                  class="dc-nav-toc-panel__link"
+                  data-router-shallow="true"
+                >
+                  <div class="dc-nav-toc-panel__control-name">tabs</div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M1.25 8A.75.75 0 0 1 2 7.25h10.19L9.47 4.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H2A.75.75 0 0 1 1.25 8Z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="dc-doc-layout__desktop-only"></div>
-    </div>);
-}
+      </div>
+      <div class="dc-doc-layout__desktop-only"></div>
+    </div>
+  );
+};
 
 export default Component;

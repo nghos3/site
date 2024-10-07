@@ -1,6 +1,8 @@
 import React from 'react';
+import {useNavigate} from 'react-router-dom';
 
 const Component = () => {
+  const navigate = useNavigate();
     return (<div class="dc-doc-layout__center">
         <div class="dc-doc-page__breadcrumbs">
             <nav class="dc-breadcrumbs" aria-label="Breadcrumbs">
@@ -1505,7 +1507,7 @@ const Component = () => {
                     <div class="dc-nav-toc-panel__control dc-nav-toc-panel__control_left">
                         <div class="dc-nav-toc-panel__control-hint">Previous</div>
                         <div class="dc-nav-toc-panel__control-text">
-                            <a href="en/concepts/divs/2/div-indicator" target="_self" class="dc-nav-toc-panel__link"
+                            <a onClick={()=>navigate('/element-directory/basic-elements/indicator')} class="dc-nav-toc-panel__link"
                                 data-router-shallow="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     fill="none" viewBox="0 0 16 16">
                                     <path fill="currentColor" fill-rule="evenodd"
@@ -1519,7 +1521,7 @@ const Component = () => {
                     <div class="dc-nav-toc-panel__control dc-nav-toc-panel__control_right">
                         <div class="dc-nav-toc-panel__control-hint">Next</div>
                         <div class="dc-nav-toc-panel__control-text">
-                            <a href="en/concepts/divs/2/div-pager" target="_self" class="dc-nav-toc-panel__link"
+                            <a onClick={()=>navigate('/element-directory/basic-elements/pager')} class="dc-nav-toc-panel__link"
                                 data-router-shallow="true">
                                 <div class="dc-nav-toc-panel__control-name">pager</div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
