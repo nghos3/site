@@ -107,12 +107,12 @@ import Variables from './Components/CreatingACard/varaibles/index';
 import CalculatedExpressions from './Components/CreatingACard/calculatedExpressions/index';
 import EmbeddedFunction from './Components/CreatingACard/embeddedFunctions/index';
 import VisualElementDesign from './Components/CreatingACard/visualElementDesign';
-
+import Instruction from './Components/Instruction';
 const Router = createBrowserRouter(
   createRoutesFromElements(
     
-    <Route errorElement={<>err</>}>
-       <Route  path="/" element={<Navigation>gg</Navigation>} />
+    <Route errorElement={<>Something went Wrong</>}>
+       <Route  path="/" element={<Navigation><Instruction /></Navigation>} />
       <Route path='/creating-card/visual-element-design'  element={<Navigation><VisualElementDesign /></Navigation>} />
       <Route path='/creating-card/element-groups' element={<Navigation><ElementGoups /></Navigation>} />
       <Route  path='/creating-card/element-location-and-size' element={<Navigation><ElementLocationAndSize /></Navigation>} />
